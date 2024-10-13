@@ -1,0 +1,305 @@
+body {
+    font-family: 'Adamina',serif;
+    color: #181818;
+    text-align: center;
+    background-color: #FCD0CA;
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+/* ---------------------- CREATING THE NAV BAR OF THE WEBSITE ----------------------*/
+.navbar {
+    background-color: rgba(217, 217, 217, 0.5); /* Transparent background */
+    padding: 10px 0; /* Padding inside the navbar */
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #4E4E4E;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 10px 20px; /* Padding inside each link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* When hovering your mouse to underline text */
+}
+
+
+/* Containers */
+
+.container{
+    display: flex;
+    columns: 2;
+}
+
+h2{
+    font-size: 2rem;
+    text-decoration: underline;
+}
+
+/* Columns */
+.column1{
+    flex-basis: 50%;
+    margin-left: 20px;
+    margin-bottom: 0; /* Adjust this as needed */
+}
+
+.column2{
+    text-align: center;
+    flex-basis: 50%;
+}
+
+/* Pictures of apartments  Slider View*/
+
+.studioPicture{
+    width: 100%;
+    height: auto;
+}
+
+.section-container{
+    padding: 1rem;
+}
+
+.slider-wrapper{
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+}
+
+.slider {
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow-x: hidden; /* Hide scrollbar */
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsl(0, 0%, 0%, 0.25);
+    border-radius: 0.5rem;
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+    object-fit: cover;
+}
+
+.slider-nav{
+    display: flex;
+    column-gap: 1rem;
+    position: absolute;
+    bottom: 1.25rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+}
+
+.slider-nav a{
+    width: 0.5rem;
+    height: 0.5rem;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.75;
+    transition: opacity ease 250ms;
+}
+
+.slider-nav a:hover{
+    opacity: 1;
+}
+
+/* General info list */
+.generalInfoList{
+    font-size: 2rem;
+}
+
+.generalInfoList li{
+    margin-bottom: 10px;
+}
+
+/* Info about the room */
+
+ol.ViewList, ol.SmokingPolicy, ol.bathroomList, ol.inYourApartment {
+    list-style-type: none; /* Remove the default numbers */
+    padding-left: 0; /* Remove any default padding */
+}
+
+ol.ViewList li::before, ol.SmokingPolicy li::before, ol.bathroomList li::before, ol.inYourApartment li::before {
+    content: '✓ '; /* Add the checkmark symbol before each list item */
+    color: black; /* Set the checkmark color to black */
+    font-weight: bold; /* Optional: Make the checkmark bold */
+    margin-right: 10px; /* Add some space between the checkmark and text */
+}
+
+/* GRID CONTAINER TIME TO CORRECT THE LISTS : */
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 equal columns */
+    grid-template-rows: auto auto; /* Two rows */
+    gap: 20px; /* Space between grid items */
+}
+
+.grid-container > div {
+    margin-top: 20px;
+    background-color: rgba(228, 228, 228, 0.7); /* Optional: add a semi-transparent background for contrast */;
+    font-size: 2rem;
+    /* Ensures each section takes up the full space of its grid cell */
+    display: flex;
+    flex-direction: column; /* Stack heading and list vertically */
+}
+
+.bathroomList {  
+    font-size: 1.5rem;
+    grid-column: 1; /* First column */
+    grid-row: 1; /* First row */
+}
+
+.ViewList { 
+    font-size: 1.5rem;
+    grid-column: 2; /* Second column */
+    grid-row: 1; /* First row */
+}
+
+.SmokingPolicy {
+    font-size: 1.5rem;
+    grid-column: 3; /* Third column */
+    grid-row: 1; /* First row */
+}
+
+.in-your-apartment {
+    background-color: rgba(228, 228, 228, 0.4); /* Optional: add a semi-transparent background for contrast */;
+    grid-column: 1 / span 3; /* Span all 3 columns */
+    grid-row: 2; /* Second row */
+}
+
+.in-your-apartment > .inYourApartment{
+    font-size: 1.5rem;
+}
+
+/* Full Screen picture*/
+a{
+    text-decoration: none;
+    color: #4E4E4E;
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1000; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.9); /* Black background with opacity */
+}
+
+.modal-content {
+    margin: auto;
+    display: block;
+    width: 80%; /* Set to 80% of the screen width */
+    height: auto; /* Keep aspect ratio */
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+ /* Buttons Prev and Next picture */
+.prev, .next {
+    position: absolute;
+    top: 50%; /* Center vertically */
+    color: white;
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 16px;
+    transition: 0.3s;
+}
+
+.prev {
+    left: 20px; /* Position to the left */
+}
+
+.next {
+    right: 20px; /* Position to the right */
+}
+
+.prev:hover, .next:hover {
+    color: #bbb; /* Change color on hover */
+}
+
+
+
+/* Contacts */
+.contacts {
+    color: #181818;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    padding-left: 20px;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.contacts .info {
+    margin: 0; /* Remove any default margin */
+    padding: 5px 0px 5px 0px;
+    text-indent: 0; /* Ensure no indentation */
+}
+#location{
+    color: #181818;
+}
+#location:hover{
+    text-decoration: underline;
+}
+
+
+
+
+/* Media Query for Smaller Screens */
+@media all and (max-width: 700px) {
+
+    .generalInfoList{
+        font-size: 1rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+}
+

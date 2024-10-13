@@ -1,0 +1,287 @@
+body {
+    font-family: 'Adamina',serif;
+    text-align: center;
+    background-color: #FCD0CA;
+    margin-top: 0px;
+    padding-top: 5px;
+}
+
+
+
+/* ---------------------- CREATING THE NAV BAR OF THE WEBSITE ----------------------*/
+.navbar {
+    background-color: rgba(217, 217, 217, 0.5); /* Transparent background */
+    padding: 10px 0; /* Padding inside the navbar */
+    display: flex;
+    width: fit-content;
+    margin-left: auto;
+    padding-right: 20px;
+    margin-bottom: 20px;
+    justify-content: flex-end;
+}
+
+.navbar ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none; /* Removes underline from links */
+    color: #4E4E4E;
+    font-size: 1.2rem; /* Increase font size */
+    padding: 10px 20px; /* Padding inside each link */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+nav ul li a:hover {
+    text-decoration: underline; /* When hovering your mouse to underline text */
+}
+
+
+/* Creating the background of the Villa and also the name on it */
+.flex-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.logo{
+    margin-top: 50px;
+    width: 15rem;
+    height: auto;
+}
+
+.home{
+    background-image: url('./outsideviews/_SON9281.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 1000px;
+}
+
+.vilaStepiH1{
+    margin-top: 100px;
+    padding: 20px;
+    background-color: rgba(228, 228, 228, 0.4); /* Optional: add a semi-transparent background for contrast */
+    font-size: 4rem;
+    display: inline-block;
+}
+
+.boxHomeText{
+
+    font-size: 3rem;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%); /* Offset the center */
+    background-color: rgba(228, 228, 228, 0.4); /* Optional: add a semi-transparent background for contrast */
+    padding: 10px; /* Optional: add some padding */
+}
+
+.service {
+    font-size: 3rem;
+    align-items: center;
+}
+
+
+.serviceIcons {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping of icons */
+    justify-content: space-around; /* Spread icons evenly */
+    align-items: center;
+    margin-top: 20px; /* Space between the service title and icons */
+}
+
+.serviceItem {
+    text-align: center; /* Center text under each icon */
+    margin: 10px; /* Add spacing around each item */
+}
+
+.serviceItem img {
+    width: 100px; /* Set the size of your icons */
+    height: auto; /* Maintain aspect ratio */
+}
+
+
+.serviceItem p {
+    margin-top: 10px; /* Space between icon and text */
+    font-size: 1rem; /* Text size for service labels */
+    color: #474747; /* Optional: color for the text */
+}
+
+.service4{
+    width: 96px;
+    height: 96px;
+}
+
+/* InfoText about the Villa */
+.infoText{
+    font-size: 2rem;
+}
+
+/* Slide show */
+
+.titleOfSlideShow{
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.container{
+    padding: 2rem;
+}
+
+.slider-wrapper{
+    position:relative;
+    max-width: 80rem;
+    margin: 0 auto;
+}
+
+.slider{
+    display: flex;
+    aspect-ratio: 16 / 9;
+    overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+}
+
+.slider img{
+    flex: 1 0 100%;
+    scroll-snap-align: start;
+}
+
+
+/* Studio 1  Container*/
+
+.studio{
+    background-color: rgba(237, 255, 253, 0.4); /* Adjust alpha to control transparency */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.titleStudio{
+    text-decoration: underline;
+    font-size: 2rem;
+    text-align: start;
+    margin: 10px 0px 10px 0px;
+}
+
+a.contactText:visited {
+    color: inherit; /* or specify the desired color */
+    text-decoration: none; /* optional: removes underline if needed */
+}
+
+
+.studio-link {
+    text-decoration: none; /* Remove underline from links */
+    color: inherit; /* Inherit color from parent */
+}
+
+.studio {
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: transform 0.2s; /* Add a smooth transition */
+}
+
+.studio:hover {
+    transform: scale(1.02); /* Slightly enlarge on hover */
+}
+
+
+/* Studio 1 Picture and Text */
+.studioPicture {
+    width: 100%; /* Set the width to 100% of its container */
+    max-width: 90%; /* Prevent the image from going too wide */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 5%; /* Center the image horizontally */
+    margin-right: auto; /* Center the image horizontally */
+    display: block; /* Ensure it's treated like a block element */
+}
+
+.studioText{
+    font-size: 2rem;
+}
+
+/* Contacts */
+.contacts {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column; /* Align items vertically */
+    padding-left: 20px;
+}
+
+h2{
+    text-decoration: underline;
+}
+
+.contacts .info {
+    margin: 0; /* Remove any default margin */
+    padding: 5px 0px 5px 0px;
+    text-indent: 0; /* Ensure no indentation */
+}
+
+#location:hover{
+    text-decoration: underline;
+}
+
+
+/* Media Query for Smaller Screens */
+@media all and (max-width: 500px) {
+    body {
+        font-size: 1rem;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    .vilaStepiH1 {
+        font-size: 1.5rem;
+    }
+
+    .boxHomeText {
+        font-size: 1.2rem;
+    }
+
+    .service {
+        font-size: 1.5rem;
+    }
+
+    .serviceItem p {
+        font-size: 0.9rem;
+    }
+
+    .infoText{
+        font-size: 1.5rem;
+    }
+
+    .studioText {
+        font-size: 0.5rem;
+    }
+
+    .titleStudio {
+        font-size: 1.5rem;
+    }
+
+    .contacts {
+        font-size: 1.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .contacts .info {
+        font-size: 1.2rem;
+    }
+}
