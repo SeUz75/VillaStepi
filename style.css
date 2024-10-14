@@ -49,6 +49,7 @@ nav ul li a:hover {
 /* Creating the background of the Villa and also the name on it */
 .flex-container{
     display: grid;
+    margin-bottom: 30px;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
@@ -174,7 +175,7 @@ nav ul li a:hover {
     text-decoration: underline;
     font-size: 2rem;
     text-align: start;
-    margin: 10px 0px 10px 0px;
+    margin: 10px 0px 10px 20%;
 }
 
 a.contactText:visited {
@@ -200,10 +201,10 @@ a.contactText:visited {
 
 /* Studio 1 Picture and Text */
 .studioPicture {
-    width: 100%; /* Set the width to 100% of its container */
+    width: 60%; /* Set the width to 100% of its container */
     max-width: 90%; /* Prevent the image from going too wide */
     height: auto; /* Maintain aspect ratio */
-    margin-left: 5%; /* Center the image horizontally */
+    margin-left: 20%; /* Center the image horizontally */
     margin-right: auto; /* Center the image horizontally */
     display: block; /* Ensure it's treated like a block element */
 }
