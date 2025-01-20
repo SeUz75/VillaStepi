@@ -55,8 +55,10 @@ nav ul li a:hover {
 }
 
 .logo{
-    margin-top: 50px;
-    width: 15rem;
+    opacity: 70%;
+    margin-top: 150px;
+    margin-left: 150px;
+    width: 8rem;
     height: auto;
 }
 
