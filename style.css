@@ -57,13 +57,13 @@ nav ul li a:hover {
 .logo{
     opacity: 70%;
     margin-top: 150px;
-    margin-left: 150px;
+    margin-left: 0;
     width: 8rem;
     height: auto;
 }
 
 .home{
-    background-image: url('./outsideviews/_SON9281.webp');
+    background-image: url('./outsideviews/outsidephoto.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
